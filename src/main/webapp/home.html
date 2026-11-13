@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Book Store</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background: white;
+        padding: 35px;
+        width: 450px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+
+    td:first-child {
+        font-weight: bold;
+        color: #444;
+        width: 40%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 11px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        outline: none;
+        font-size: 14px;
+        transition: border 0.3s;
+    }
+
+    input[type="text"]:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 4px rgba(102, 126, 234, 0.3);
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 11px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    input[type="submit"] {
+        background: #667eea;
+        color: white;
+    }
+
+    input[type="submit"]:hover {
+        background: #4c5dcc;
+    }
+
+    input[type="reset"] {
+        background: #e5e7eb;
+        color: #333;
+    }
+
+    input[type="reset"]:hover {
+        background: #d1d5db;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Book Registration Form</h2>
+
+    <form action="register" method=post>
+        <table>
+            <tr>
+                <td>Book Name</td>
+                <td><input type="text" name="bookName" required></td>
+            </tr>
+
+            <tr>
+                <td>Book Edition</td>
+                <td><input type="text" name="bookEdition" required></td>
+            </tr>
+
+            <tr>
+                <td>Book Price</td>
+                <td><input type="number" name="bookPrice" min="0" step="0.01" required></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Register"></td>
+                <td><input type="reset" value="Cancel"></td>
+            </tr>
+        </table>
+        <a href='bookList'>Book List</a>
+    </form>
+
+</div>
+
+</body>
+</html>
